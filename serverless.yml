@@ -17,6 +17,16 @@ provider:
   environment:
     NOTES_TABLE: ${self:service}-${opt:stage, self:provider.stage}
 
+functions:
+  createNote:
+    handler: app/handler.createNote
+    events:
+      - httpApi:
+          path: /notes
+          method: post
+
+
+
 resources:
   Resources:
     NotesTable:

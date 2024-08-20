@@ -9,7 +9,7 @@ const notesController = new NotesController();
  * Route: POST /notes
  */
 
-export const addNote = async (event: APIGatewayProxyEventV2) => {
+export const createNote = async (event: APIGatewayProxyEventV2) => {
   try {
     const note: CreateNoteDto = JSON.parse(event.body as string);
     note.user_id = getUserId(event.headers);
