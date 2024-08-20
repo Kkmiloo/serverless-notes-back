@@ -25,7 +25,7 @@ export class NotesService {
   async getNote(id: string) {
     const note = await this.notesRepository.getNote(id);
 
-    if (!note) throw new Error('Note not found');
+    if (!note) throw new Error('Note not founds');
 
     return note;
   }
