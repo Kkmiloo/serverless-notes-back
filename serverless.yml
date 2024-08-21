@@ -34,7 +34,7 @@ functions:
   createNote:
     handler: app/handler.createNote
     events:
-      - httpApi:
+      - http:
           path: /notes
           method: post
           cors:
@@ -43,7 +43,7 @@ functions:
   getNote:
     handler: app/handler.getNote           
     events:
-      - httpApi:
+      - http:
           path: /notes
           method: get
           cors:

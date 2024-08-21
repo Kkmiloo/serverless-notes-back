@@ -12,7 +12,7 @@ phases:
   build:
     commands:
       - echo Build started on `date`
-      - sls deploy -v -s $ENV_NAME
+      - serverless deploy -s $ENV_NAME
       - echo Build completed on `date`
   post_build:
     commands:
