@@ -33,7 +33,9 @@ export class NotesRepository {
       TableName: tableName,
       Item: note,
     });
-    return await this.notesDocClient.send(command);
+    const response = await this.notesDocClient.send(command);
+    console.log(response);
+    return response;
   }
 
   async updateNote(note: Partial<Notes>) {

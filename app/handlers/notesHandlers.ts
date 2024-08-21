@@ -12,10 +12,14 @@ const notesController = new NotesController();
 export const createNote = async (event: APIGatewayProxyEventV2) => {
   try {
     const note: CreateNoteDto = JSON.parse(event.body as string);
+
+    console.log(event.headers);
+
     note.user_id = getUserId(event.headers);
     note.user_name = getUserName(event.headers);
 
-    return notesController.addNote(note);
+    const result = await notesController.addNote(note);
+    return result;
   } catch (error) {
     console.log(error);
     return {

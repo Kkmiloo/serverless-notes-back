@@ -1,5 +1,5 @@
 import { NotesRepository } from '../repository/NotesRepository';
-import { addNote } from '../../handlers/notesHandlers';
+
 import { CreateNoteDto } from '../dto/create-note.dto';
 import { Notes } from '../interfaces/notes.interface';
 import { v4 as uuidv4 } from 'uuid';

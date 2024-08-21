@@ -10,9 +10,11 @@ export const getResponseHeaders = () => {
 };
 
 export const getUserId = (headers: APIGatewayProxyEventHeaders) => {
-  return headers['App-User-Id'];
+  console.log(headers['app-user-id']);
+
+  return headers['app-user-id'];
 };
 
 export const getUserName = (headers: APIGatewayProxyEventHeaders) => {
-  return headers['App-User-Name'];
+  return headers['app-user-name'];
 };
